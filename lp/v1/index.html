@@ -405,26 +405,6 @@
                 version: document.location.pathname.replace(/\/+/g, '').replace('landings', '').replace('index.html', '').replace('index2.html', '').replace('confirm.html', '')
             }
         });
-
-        $(function() {
-            var $btnSbmt = $('.button-sbmt');
-
-            $('[name=phone]').on('input', function(e) {
-                if ($.trim($(this).val()).length !== 14) {
-                    $btnSbmt.addClass('btn--disabled')
-                } else {
-                    $btnSbmt.removeClass('btn--disabled')
-                }
-            });
-
-            $btnSbmt.on('click', function(e) {
-                if ($(this).hasClass('btn--disabled')) {
-                    alert('incorrect number');
-                    return false
-                }
-            })
-
-        })
     </script>
 
     <script src="price.js"></script>
